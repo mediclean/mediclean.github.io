@@ -884,8 +884,12 @@ if (logoFlip && logoInner) {
       e.preventDefault();
       touchFlipped = true;
       logoInner.style.animation = 'coin-spin-in 0.65s ease-out forwards';
+      setTimeout(() => {
+        logoInner.style.animation = 'coin-spin-out 0.65s ease-out forwards';
+        touchFlipped = false;
+      }, 3000);
     }
-    /* second tap: touchFlipped=true, link fires normally */
+    /* second tap within 3s: touchFlipped=true, link fires normally */
   });
 }
 
