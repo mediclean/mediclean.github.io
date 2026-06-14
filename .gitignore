@@ -1,0 +1,10 @@
+# Claude Code project files
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp
